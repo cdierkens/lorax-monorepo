@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from lorax import Client
+from pydantic import BaseModel
 
 client = Client(
     base_url="https://serving.app.predibase.com/6dcb0c/deployments/v2/llms/mistral-7b-instruct-dedicated",
@@ -9,9 +10,12 @@ client = Client(
 app = FastAPI()
 
 
+class Response(BaseModel):
+    text: str
+
+
 @app.get("/")
-def read_root():
-    prompt = "What is your name?"
+def read_root(prompt: str) -> Response:
     text = client.generate(prompt, max_new_tokens=20, temperature=0.1).generated_text
 
-    return {prompt: "What is your name?", "text": text}
+    return {"text": text}
