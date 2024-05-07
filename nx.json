@@ -27,7 +27,8 @@
       "options": {
         "targetName": "lint"
       }
-    }
+    },
+    "@nxlv/python"
   ],
   "generators": {
     "@nx/react": {
