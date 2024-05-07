@@ -1,9 +1,15 @@
-import NxWelcome from './nx-welcome';
+import { useReadRootGetQuery } from '../store/loraxServerApi';
 
 export function App() {
+  const { data, status } = useReadRootGetQuery({
+    prompt: 'What is your name?',
+  });
+
   return (
     <div>
-      <NxWelcome title="lorax-web" />
+      {status}
+
+      {data && data.text}
     </div>
   );
 }
