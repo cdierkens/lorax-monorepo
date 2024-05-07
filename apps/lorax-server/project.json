@@ -60,6 +60,13 @@
         "command": "poetry run pytest tests/",
         "cwd": "apps/lorax-server"
       }
+    },
+    "serve": {
+      "executor": "@nxlv/python:run-commands",
+      "options": {
+        "command": "poetry run fastapi dev lorax_server/main.py",
+        "cwd": "apps/lorax-server"
+      }
     }
   },
   "tags": []

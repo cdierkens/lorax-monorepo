@@ -3,4 +3,4 @@
 
 def hello():
     """Return a friendly greeting."""
-    return "Hello lorax-server"
+    return "Hello lorax-server!"
