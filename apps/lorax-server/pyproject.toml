@@ -23,6 +23,7 @@ readme = 'README.md'
   [tool.poetry.dependencies]
   python = ">=3.9,<3.11"
   fastapi = "^0.111.0"
+  lorax-client = "^0.5.0"
 
   [tool.poetry.group.dev.dependencies]
   autopep8 = "2.0.2"
