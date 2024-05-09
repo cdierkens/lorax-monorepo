@@ -2,6 +2,10 @@
 
 ## Setup
 
+### Replace the character <TOKEN>
+
+In `apps/lorax-server/lorax_server/main.py`, replace `<TOKEN>` with your API token.
+
 ### Install Node Dependencies
 
 ```
