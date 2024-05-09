@@ -1,0 +1,3 @@
+{
+  "python.analysis.extraPaths": ["apps/lorax-server/lorax_server"]
+}
